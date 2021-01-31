@@ -1,14 +1,18 @@
 \documentclass[a4paper]{article}
 
 \usepackage{geometry}
+\usepackage{graphicx}
 \usepackage{hyperref}
+\usepackage{makecell}
+\usepackage{multirow}
 \usepackage{tabularx}
 
 % Roman section numbers
 % \renewcommand{\thesection}{\Roman{section}} 
 % \renewcommand\thesubsection{\Alph{subsection}}
 
-\newcolumntype{C}{>{\centering\arraybackslash}X}
+\newcolumntype{C}{>{\centering\arraybackslash}X} % custom X column with horizontal centering
+\renewcommand\tabularxcolumn[1]{m{#1}}% for vertical centering text in all columns
 
 \begin{document}
 \begin{center}
@@ -55,31 +59,58 @@ This course aims to:
 
 \subsection{Course Learning Outcomes (CLOs)}
 
-On successful completion of this course, you will:
-\begin{enumerate}
-\item correctly solve problems related to propositional and predicate logic,
-\item correctly solve problems related to sets, relations, and functions,
-\item correctly model suitable problems using graphs and combinatorics and apply known theorems on the models,
-\item correctly apply proof techniques to prove mathematical statements, and
-\item fruitfully collaborate on the solution, research, and presentation of problems, proofs, and techniques related to the above topics.
-\end{enumerate}
+Course Learning Outcomes (CLOs) describe your knowledge, skills, and abilities on successful completion of a course. By the end of this course, you will achieve the following outcomes at the indicated learning levels.
 
-\section{Program Learning Outcomes (PLOs) }
+\noindent
+\begin{tabularx}{\linewidth}{|>{\bfseries}c|>{\bfseries}l|X|c|}
+  \hline
+  \multirow{5}{*}[-5pt]{\rotatebox{90}{\small\makecell{Course Learning\\ Outcome (CLO)}}} & 1 & correctly solve problems related to propositional and predicate logic & Cog-4 \\\cline{2-4}
+  & 2 & correctly solve problems related to sets, relations, and functions & Cog-4 \\\cline{2-4}
+  & 3 & correctly model suitable problems using graphs and combinatorics and apply known theorems on the models & Cog-4 \\\cline{2-4}
+  & 4 & correctly apply proof techniques to prove mathematical statements & Cog-4 \\\cline{2-4}
+  & 5 & fruitfully collaborate on the solution, research, and presentation of problems, proofs, and techniques related to the above topics & Aff-3 \\\hline
+\end{tabularx}
 
-Coming soon.
+\subsection{Program Learning Outcomes (PLOs) }
 
-\section{CLO to PLO mapping}
+Program Learning Outcomes (PLOs) describe your knowledge, skills, and abilities at the time of graduation. Shown below is the level of emphasis that each of the CLOs places on specific PLOs of the Computer Science program.
 
-Coming soon.
+\noindent
+{\small
+\begin{tabularx}{\linewidth}{|>{\bfseries}c|>{\bfseries}l|X||*{5}{c|}}
+  \cline{4-8}
+  \multicolumn{3}{c}{} & \multicolumn{5}{|c|}{\textbf{CLO}} \\\cline{4-8}
+   \multicolumn{3}{c|}{} & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} \\\hline
+\multirow{6}{*}[-10pt]{\rotatebox{90}{\makecell{Program Learning\\ Outcome (PLO)}}}  & 1 & Analysis: analyze a given situation and reduce it to one or more problems that can be solved via computer intervention. & 80\% & 80\% & 80\% & 80\% & \\\cline{2-8}
+& 5 & Tools: work with the latest tools that support development, e.g., IDE's, version control systems, debuggers, profilers, and continuous build systems. & 40\% & 40\% & 40\% & 40\% & 40\% \\\cline{2-8}
+& 6 & Self-learning: research, learn, and apply requirements needed to implement a solution for a given high level problem & 20\% & 20\% & 20\% & 20\% & 80\% \\\cline{2-8}
+& 8 & Communication and Teamwork: work effectively in inter-disciplinary teams. & 50\% & 50\% & 50\% & 50\% & 50\% \\\hline
+\end{tabularx}
+}
 
-% \noindent
-% \begin{tabularx}{1.0\linewidth}{|X||*5{X|}}
-%   \hline
-%   &CLO 1& CLO 2& CLO 3& CLO 4& CLO 5\\  \hline\hline
-%   PLO 1 & 25\%& 25\% & 25\% & 25\% & 25\%\\\hline
-% \end{tabularx}
+\begin{itemize}
+\item CLOs 1 through 4 develop analysis skills but lack computer implementation.
+\item The assessments for CLOs 1 through 5 require working with
+  \begin{itemize}
+  \item \LaTeX: a document preparation system suited for mathematical documents,
+  \item GitHub, an online environment for git which is a popular version control system
+  \end{itemize}
+\item Students will self-learn the required features of the tools required for the assessments corresponding to CLOs 1 through 4.
+\item The assessment for CLO 5 requires research and learning on a mathematical topic or problem.
+\item All assessments are attempted in teams and team work is assessed.
+\end{itemize}
 
-% Note – if the SLOs/CLOs are SMART then 1 SLO/CLO may target only one PLO, however, different SLOs/CLOs might contribute to a PLO.]
+% CS PLOs
+% \begin{enumerate}
+% \item Analysis: analyze a given situation and reduce it to one or more problems that can be solved via computer intervention.
+% \item Design: design one or more computer-based solutions of a given problem and select the solution that is best under the circumstances.
+% \item Programming: program a given solution in a variety of programming languages belonging to different paradigm.
+% \item Implementation: design and implement software systems of varying complexity.
+% \item Tools: work with the latest tools that support development, e.g., IDE's, version control systems, debuggers, profilers, and continuous build systems.
+% \item Self-learning: research, learn, and apply requirements needed to implement a solution for a given high level problem description.
+% \item Ethics and Awareness: foresee both impact and possible ramifications of computing practices
+% \item Communication and Teamwork: work effectively in inter-disciplinary teams.
+% \end{enumerate}
 
 \section{Format and Procedures}
 
